@@ -1,9 +1,12 @@
 package com.contacts.restapi.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
 @Table
+@JsonIgnoreProperties( { "user" })
 public class Contact {
     @Id
     @GeneratedValue
@@ -15,6 +18,13 @@ public class Contact {
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    public void SetContact(Contact newContact) {
+        this.firstName = newContact.getFirstName();
+        this.secondName = newContact.getSecondName();
+        this.email = newContact.getEmail();
+        this.phoneNumber = newContact.getPhoneNumber();
+    }
 
     public User getUser() {
         return user;
@@ -62,15 +72,5 @@ public class Contact {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                ", firstName='" + firstName + '\'' +
-                ", secondName=" + secondName + '\'' +
-                ", email=" + email + '\'' +
-                ", phoneNumber=" + phoneNumber + '\'' +
-                '}';
     }
 }
