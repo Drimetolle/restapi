@@ -7,8 +7,8 @@
 ## Запуск
 ```
 mvn spring-boot:run
-http://localhost:8080/
 ```
+зайти на: `http://localhost:8080/`
 ## Запросы
 **Получить все контакты:**
 ```JavaScript
