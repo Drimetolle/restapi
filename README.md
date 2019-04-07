@@ -42,3 +42,11 @@ fetch('/sign-up?login=test1&password=test1',
 fetch('/contacts/11?login=test&password=test',
     {method: 'DELETE', headers: {'Content-Type': 'application/json'}}).then(console.log)
 ```
+**Поиск контактов по полям:**
+```JavaScript
+fetch('/search?field=email:1,firstName:2&login=test&password=test',
+    {method: 'GET', headers: {'Content-Type': 'application/json'}}).then(console.log)
+    
+fetch('/search?field=phoneNumber:5,firstName:2&login=test&password=test',
+    {method: 'GET', headers: {'Content-Type': 'application/json'}}).then(console.log)
+```
