@@ -1,5 +1,15 @@
-# restapi
-## Examples
+## Требования
+- jdk 1.8
+- mssql
+## Подготовка
+1. Создать базу данных
+2. Обновить данные с вашими учетными и портом: `src\main\resources\application.properties`.
+## Запуск
+```
+mvn spring-boot:run
+http://localhost:8080/
+```
+## Запросы
 **Получить все контакты:**
 ```JavaScript
 fetch('/contacts?login=test&password=test', 
