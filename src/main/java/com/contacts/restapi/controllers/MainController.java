@@ -68,7 +68,7 @@ public class MainController {
         }
     }
 
-    @PostMapping("/sign-in")
+    @PostMapping("/sign-up")
     public User registration(@RequestParam(value="login") String login,
                              @RequestParam(value="password") String password,
                              HttpServletResponse response) {
