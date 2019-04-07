@@ -1,1 +1,34 @@
 # restapi
+## Examples
+**Получить все контакты:**
+```JavaScript
+fetch('/contacts?login=test&password=test', 
+    {method: 'GET', headers: {'Content-Type': 'application/json'}}).then(console.log)
+```
+**Получить контакт по id:**
+```JavaScript
+fetch('/contacts/11?login=test&password=test', 
+    {method: 'GET', headers: {'Content-Type': 'application/json'}}).then(console.log)
+```
+**Добавить контакт:**
+```JavaScript
+fetch('/contacts?login=test&password=test', 
+    {method: 'POST', headers: {'Content-Type': 'application/json'}, 
+    body: JSON.stringify({firstName: "", secondName: "", email: "", phoneNumber: ""})}).then(console.log)
+```
+**Изменить контакт:**
+```JavaScript
+fetch('/contacts/11?login=test&password=test', 
+    {method: 'PUT', headers: {'Content-Type': 'application/json'}, 
+    body: JSON.stringify({firstName: "1", secondName: "2", email: "3", phoneNumber: "4"})}).then(console.log)
+```
+**Добавить нового пользователя:**
+```JavaScript
+fetch('/sign-up?login=test1&password=test1', 
+    {method: 'POST', headers: {'Content-Type': 'application/json'}}).then(console.log)
+```
+**Удалить контакт:**
+```JavaScript
+fetch('/contacts/11?login=test&password=test',
+    {method: 'DELETE', headers: {'Content-Type': 'application/json'}}).then(console.log)
+```
