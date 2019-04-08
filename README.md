@@ -3,12 +3,13 @@
 - mssql
 ## Подготовка
 1. Создать базу данных
-2. Обновить данные с вашими учетными и портом: `src\main\resources\application.properties`.
+2. Обновить данные в: `src\main\resources\application.properties`.
 ## Запуск
 ```
 mvn spring-boot:run
 ```
-зайти на: `http://localhost:8080/`
+
+зайти на: [http://localhost:8080/](http://localhost:8080/)
 ## Запросы
 **Получить все контакты:**
 ```JavaScript
